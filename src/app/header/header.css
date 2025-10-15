@@ -1,0 +1,36 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1976d2; /* Angular Material Blue */
+  color: white;
+  padding: 0 16px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  flex: 1;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.app-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 12px;
+  font-size: 24px;
+}

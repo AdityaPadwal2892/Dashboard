@@ -1,0 +1,11 @@
+<section class="blocks-container">
+  <div class="block" *ngFor="let block of blocks">
+    <div class="block-header">
+      <div class="icon-badge" [ngStyle]="{ 'background-color': block.color + '20', 'color': block.color }">
+        <mat-icon>{{ block.icon }}</mat-icon>
+      </div>
+      <div class="block-label">{{ block.label }}</div>
+    </div>
+    <div class="block-count">{{ block.count }}</div>
+  </div>
+</section>

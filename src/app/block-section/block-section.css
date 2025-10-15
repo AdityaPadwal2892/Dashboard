@@ -1,0 +1,68 @@
+.blocks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.block {
+  background: linear-gradient(to bottom right, #f9f9f9, #ffffff);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.block-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-badge {
+  background-color: #e0f0ff;
+  color: #007BFF;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-badge mat-icon {
+  font-size: 24px;
+}
+
+.block-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.block-count {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.icon-badge {
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-badge mat-icon {
+  font-size: 24px;
+}
+

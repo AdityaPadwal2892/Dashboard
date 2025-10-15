@@ -1,0 +1,16 @@
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust header height accordingly */
+}
+
+.sidebar {
+  flex: 0 0 20%; /* Fixed 20% width */
+  border-right: 1px solid #ddd; /* Optional separator */
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1; /* Takes remaining 80% */
+  padding: 20px;
+  overflow-y: auto;
+}
