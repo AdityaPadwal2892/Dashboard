@@ -13,12 +13,94 @@
 
     <!-- Menu -->
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard"><mat-icon>home</mat-icon> Dashboard</a>
-      <a mat-list-item routerLink="/purchase-orders"><mat-icon>shopping_cart</mat-icon> Purchase Orders</a>
-      <a mat-list-item routerLink="/quotations"><mat-icon>description</mat-icon> Quotations</a>
-      <a mat-list-item routerLink="/suppliers"><mat-icon>groups</mat-icon> Suppliers</a>
-      <a mat-list-item routerLink="/inventory"><mat-icon>inventory_2</mat-icon> Inventory</a>
-      <a mat-list-item routerLink="/reports"><mat-icon>bar_chart</mat-icon> Reports</a>
+
+      <a mat-list-item routerLink="/dashboard">
+        <mat-icon>home</mat-icon> Dashboard
+      </a>
+
+      <!-- Purchase Orders -->
+      <mat-expansion-panel class="menu-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>shopping_cart</mat-icon> Purchase Orders
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <!-- View PO with nested sub-options -->
+          <mat-expansion-panel class="nested-panel">
+            <mat-expansion-panel-header>
+              <mat-panel-title>View PO</mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-nav-list>
+              <a mat-list-item routerLink="/purchase-orders/view/direct-po">Direct PO</a>
+              <a mat-list-item routerLink="/purchase-orders/view/purchase-order">Purchase Order</a>
+              <a mat-list-item routerLink="/purchase-orders/view/issue-slip">Issue Slip</a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+
+          <!-- PO Checking -->
+          <a mat-list-item routerLink="/purchase-orders/checking">PO Checking</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Quotations -->
+      <mat-expansion-panel class="menu-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>description</mat-icon> Quotations
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="/quotations/entry">Quotation Entry</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Suppliers -->
+      <mat-expansion-panel class="menu-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>groups</mat-icon> Suppliers
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="/suppliers/master">Supplier Master</a>
+          <a mat-list-item routerLink="/suppliers/bill-entry">Supplier Bill Entry</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Inventory -->
+      <mat-expansion-panel class="menu-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>inventory_2</mat-icon> Inventory
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="/inventory/product-master">Product Master</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Reports -->
+      <mat-expansion-panel class="menu-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>bar_chart</mat-icon> Reports
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="/reports/site-wise-stock-consume">Site Wise Stock Consume</a>
+          <a mat-list-item routerLink="/reports/stock-report">Stock Report</a>
+          <a mat-list-item routerLink="/reports/day-wise-stock-consume">Day Wise Stock Consume</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Settings -->
       <a mat-list-item routerLink="/settings"><mat-icon>settings</mat-icon> Settings</a>
     </mat-nav-list>
 
@@ -27,7 +109,7 @@
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content class="content">
-
-  </mat-sidenav-content>
+  <!-- <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content> -->
 </mat-sidenav-container>

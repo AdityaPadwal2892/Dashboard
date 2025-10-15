@@ -52,3 +52,13 @@
   left: 20px;
 }
 
+/* Add spacing between top-level links in your own container */
+.sidenav mat-list-item {
+  margin-bottom: 12px;
+}
+
+/* Nested items spacing */
+.sidenav mat-expansion-panel .mat-list-item {
+  padding-left: 25px;
+  margin-bottom: 6px;
+}

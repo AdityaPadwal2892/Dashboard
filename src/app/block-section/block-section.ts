@@ -16,9 +16,8 @@ export class BlockSection {
   { label: 'Pending PO Approval', count: 2, icon: 'cancel', color: '#F44336' },   // Red
   { label: 'Total PRN', count: 19, icon: 'description', color: '#3F51B5' },       // Indigo
   { label: 'In Progress', count: 7, icon: 'loop', color: '#2196F3' },             // Blue
-  { label: 'Completed', count: 14, icon: 'done_all', color: '#009688' },          // Teal
-  { label: 'On Hold', count: 3, icon: 'pause_circle', color: '#FFC107' },         // Amber
-  { label: 'Cancelled', count: 1, icon: 'block', color: '#9E9E9E' }               // Grey
+  { label: 'Completed', count: 14, icon: 'done_all', color: '#009688' }      // Teal
+ 
 ];
 
 }

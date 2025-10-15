@@ -4,11 +4,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header/header';  // Import HeaderComponent
 import { RouterModule } from '@angular/router';
 import { BlockSection } from './block-section/block-section';
-import {PurchaseProductGraph } from './purchase-product-graph/purchase-product-graph'
+import { PurchaseProductGraphComponent } from './purchase-product-graph/purchase-product-graph';
+import { NgChartsModule } from 'ng2-charts';
+import { GraphSectionComponent } from "./graph-section/graph-section.component";
+import { PrnTableComponent } from './prn-table/prn-table.component'; // <-- import the standalone PRN table component
+
 
 @Component({
   selector: 'app-root',
-  imports: [LayoutComponent, MatIconModule,HeaderComponent,RouterModule,BlockSection,PurchaseProductGraph],
+  imports: [LayoutComponent, MatIconModule, HeaderComponent,
+    RouterModule, BlockSection, PurchaseProductGraphComponent, NgChartsModule, GraphSectionComponent,PrnTableComponent],
   templateUrl: './app.html',
    standalone: true,
   styleUrl: './app.css'

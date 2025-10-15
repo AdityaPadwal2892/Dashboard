@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 50vh; /* top half of the page */
+}
+
+.sub-container {
+  display: flex;
+  gap: 20px;
+  height: 100%; /* fill 50vh host */
+  padding: 10px;
+}
+
+.chart-container {
+  flex: 1; /* equally divide left and right */
+  height: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 800px) {
+  .sub-container {
+    flex-direction: column; /* stack charts vertically on small screens */
+    height: auto;
+  }
+
+  .chart-container {
+    width: 100%;
+    height: 40vh;
+  }
+}
